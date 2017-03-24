@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_gradient"
+    android:paddingTop="16dp"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    tools:context="com.ak.movienight.UI.MainActivity">
+
+    <TextView
+        android:id="@+id/topTitleTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:gravity="center_horizontal"
+        android:text="Movie Night!"
+        android:textColor="#ffffffff"
+        android:textSize="28sp"
+        android:typeface="serif"/>
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/topTitleTextView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="39dp"
+        android:text="Search for your favourite movies and TV Shows right here:"
+        android:textColor="#ffffffff"
+        android:textSize="16sp"
+        android:typeface="serif"/>
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Release year:"
+        android:textColor="#ffffffff"
+        android:textSize="16sp"
+        android:typeface="serif"
+        android:layout_centerVertical="true"
+        android:layout_alignRight="@+id/textView5"
+        android:layout_alignEnd="@+id/textView5"/>
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Rating threshold:"
+        android:textColor="#ffffffff"
+        android:textSize="16sp"
+        android:typeface="serif"
+        android:layout_below="@+id/textView3"
+        android:layout_alignRight="@+id/textView3"
+        android:layout_alignEnd="@+id/textView3"
+        android:layout_marginTop="28dp"/>
+
+    <Spinner
+        android:id="@+id/ratingThresholdSpinner"
+        style="@android:style/Holo.Light.ButtonBar"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/textView4"
+        android:layout_marginLeft="18dp"
+        android:layout_marginStart="18dp"
+        android:layout_toEndOf="@+id/textView4"
+        android:layout_toRightOf="@+id/textView4"
+        android:background="@android:color/white"
+        android:entries="@array/ratings"
+        android:spinnerMode="dropdown"
+        android:visibility="visible"/>
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Minimum # of ratings:"
+        android:textColor="#ffffffff"
+        android:textSize="16sp"
+        android:typeface="serif"
+        android:layout_below="@+id/ratingThresholdSpinner"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="32dp"/>
+
+    <Spinner
+        android:id="@+id/minNumOfRatingsSpinner"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/textView5"
+        android:layout_alignLeft="@+id/ratingThresholdSpinner"
+        android:layout_alignStart="@+id/ratingThresholdSpinner"
+        android:background="@android:color/white"
+        android:entries="@array/num_of_ratings"/>
+
+    <Button
+        android:id="@+id/moviesSearch"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#6666b2"
+        android:text="Movies"
+        android:textColor="#ffffffff"
+        android:textSize="18sp"
+
+        android:layout_alignRight="@+id/textView5"
+        android:layout_alignEnd="@+id/textView5"/>
+
+    <Spinner
+        android:id="@+id/mYearReleasedSpinner"
+        android:layout_width="55dp"
+        android:layout_height="wrap_content"
+
+        android:layout_alignBottom="@+id/textView3"
+        android:layout_alignLeft="@+id/ratingThresholdSpinner"
+        android:layout_alignStart="@+id/ratingThresholdSpinner"
+        android:background="@android:color/white"
+        android:entries="@array/years"/>
+
+    <Button
+        android:id="@+id/tvshowsSearch"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/minNumOfRatingsSpinner"
+        android:layout_alignParentBottom="true"
+        android:textSize="18sp"
+        android:textColor="#ffffffff"
+        android:background="#6666b2"
+        android:layout_alignStart="@+id/minNumOfRatingsSpinner"
+        android:text="TV Shows"/>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/textView5"
+        android:layout_alignRight="@+id/textView5"
+        android:layout_below="@+id/minNumOfRatingsSpinner"
+        android:layout_marginTop="29dp"
+        android:textColor="#ffffffff"
+        android:typeface="serif"
+        android:text="Ganre"/>
+
+    <Spinner
+        android:id="@+id/genreSpinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/minNumOfRatingsSpinner"
+        android:layout_alignStart="@+id/minNumOfRatingsSpinner"
+        android:layout_alignTop="@+id/textView"
+        android:background="@android:color/white"
+        android:entries="@array/genreNames"/>
+
+
+</RelativeLayout>
